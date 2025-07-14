@@ -119,6 +119,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'indexUser'])->name('user.dashboard');
         Route::get('/detail-costume/{id}', [LandingPageController::class, 'detailCostumeUser'])->name('user.detailCostume');
         Route::get('/history', [HistoryController::class, 'index'])->name('user.history');
+        Route::get('/history/export/pdf', [HistoryController::class, 'exportPdf'])->name('user.history.export.pdf');
+        Route::get('/history/{id}/export/pdf', [HistoryController::class, 'exportInvoicePdf'])->name('user.history.export.invoice');
         Route::get('/history/{id}', [HistoryController::class, 'show'])->name('user.history.detail');
         Route::get('/biodata', [BiodataController::class, 'index'])->name('user.biodata');
     });

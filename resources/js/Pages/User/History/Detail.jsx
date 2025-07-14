@@ -28,6 +28,16 @@ export default function Detail({ datas }) {
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg dark:bg-gray-800">
                         <div className="p-6 text-gray-900 dark:text-gray-100">
+            {/* Export Invoice PDF Button */}
+            <div className="mb-6 text-right">
+                <a
+                    href={route('user.history.export.invoice', datas.id)}
+                    target="_blank"
+                    className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded shadow"
+                >
+                    Export Invoice PDF
+                </a>
+            </div>
                             {/* Title */}
                             <h2 className="text-2xl font-semibold text-center mb-6">
                                 Detail Penyewaan Kostum
